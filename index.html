@@ -76,7 +76,7 @@ nav.scrolled {
   font-family: var(--ff-ja); font-size: 20px; font-weight: normal;
   letter-spacing: 0.08em; color: var(--ink); text-decoration: none;
 }
-.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links { display: flex; gap: 36px; list-style: none; margin-right: 130px; }
 .nav-links a {
   font-family: var(--ff-sans); font-size: 13px; font-weight: 500;
   letter-spacing: 0.14em; text-transform: uppercase;
@@ -105,7 +105,7 @@ nav.scrolled {
 /* ── HERO ── */
 .hero {
   min-height: 100svh;
-  display: grid; grid-template-columns: 40% 60%;
+  display: grid; grid-template-columns: 28% 72%;
 }
 .hero-img-col {
   position: relative; overflow: hidden; background: var(--beige-mid);
@@ -182,7 +182,7 @@ nav.scrolled {
 .jump-btn.primary:hover { background: var(--gold); border-color: var(--gold); }
 
 /* ── SECTION COMMONS ── */
-section { padding: 120px 0; }
+section { padding: 120px 0; scroll-margin-top: 80px; }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 52px; }
 
 .section-label {
@@ -857,7 +857,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (!target) return;
     e.preventDefault();
     closeMobileMenu();
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 8, behavior: 'smooth' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
