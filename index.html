@@ -15,6 +15,16 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+3000-9FFF, U+F900-FAFF, U+FF00-FFEF, U+3001-30FF;
+}
+
+/* Latin Extended (ä ö ü etc.) in ja-font contexts → use EB Garamond */
+@font-face {
+  font-family: 'UtsukushiMincho';
+  src: local('EB Garamond'), url('https://fonts.gstatic.com/s/ebgaramond/v26/SlGDmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL9.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0080-00FF, U+0100-024F, U+1E00-1EFF;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,8 +83,8 @@ nav.scrolled {
   box-shadow: 0 1px 0 var(--rule);
 }
 .nav-logo {
-  font-family: var(--ff-ja); font-size: 20px; font-weight: normal;
-  letter-spacing: 0.08em; color: var(--ink); text-decoration: none;
+  font-family: var(--ff-ja); font-size: 17px; font-weight: normal;
+  letter-spacing: 0.06em; color: var(--ink); text-decoration: none; white-space: nowrap;
 }
 .nav-links { display: flex; gap: 36px; list-style: none; margin-right: 180px; }
 .nav-links a {
@@ -236,7 +246,7 @@ section { padding: 120px 0; scroll-margin-top: 80px; }
 
 /* -- LEBENSLAUF -- */
 #lebenslauf { background: var(--white); }
-.lauf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.lauf-grid { display: grid; grid-template-columns: 220px 1fr 1fr; gap: 60px; align-items: start; }
 .lauf-col-head {
   font-family: var(--ff-sans); font-size: 11px; font-weight: 500;
   letter-spacing: 0.22em; text-transform: uppercase;
@@ -248,6 +258,7 @@ section { padding: 120px 0; scroll-margin-top: 80px; }
   padding-bottom: 22px; border-bottom: 1px solid var(--rule); margin-bottom: 22px;
 }
 .lauf-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.lauf-photo img { width: 100%; height: auto; display: block; position: sticky; top: 100px; }
 .lauf-year {
   font-family: var(--ff-sans); font-size: 12px; font-weight: 500;
   letter-spacing: 0.06em; color: var(--gold); padding-top: 3px; white-space: nowrap;
@@ -256,6 +267,7 @@ section { padding: 120px 0; scroll-margin-top: 80px; }
 .lauf-text strong { display: block; font-weight: 500; color: var(--ink); margin-bottom: 2px; font-size: 16px; }
 @media (max-width: 960px) {
   .lauf-grid { grid-template-columns: 1fr; gap: 48px; }
+  .lauf-photo { max-width: 280px; }
 }
 
 /* ── AWARDS ── */
@@ -598,15 +610,15 @@ footer {
            data-en="Masterclasses with Prof. Pavel Gililov, Prof. Akiko Ebi, Prof. Henri Sigfridsson, Prof. Jacques Rouvier, and others.">
           在学中はパヴェル・ギリロフ教授、海老明子教授、アンリ・シーグフリードソン教授、ジャック・ルヴィエ教授ほか、各国の著名教授によるマスタークラスで研鑽を積む。
         </p>
-        <p data-ja="ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニー（ピアノ・フェスティバル・ルール）などの著名会場でも演奏している。"
-           data-de="Konzerte in Deutschland, den Niederlanden, Spanien, Zypern, Irland und Italien, u. a. in der Kölner Philharmonie und beim Klavierfestival Ruhr in der Essener Philharmonie."
-           data-en="Performances across Germany, the Netherlands, Spain, Cyprus, Ireland, and Italy, including at the Cologne Philharmonie and Klavierfestival Ruhr at the Essen Philharmonie.">
-          ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニー（ピアノ・フェスティバル・ルール）などの著名会場でも演奏している。
+        <p data-ja="ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニーなどの著名会場でも演奏している。"
+           data-de="Konzerte in Deutschland, den Niederlanden, Spanien, Zypern, Irland und Italien, u. a. in der Kölner Philharmonie und der Essener Philharmonie."
+           data-en="Performances across Germany, the Netherlands, Spain, Cyprus, Ireland, and Italy, including at the Cologne Philharmonie and the Essen Philharmonie.">
+          ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニーなどの著名会場でも演奏している。
         </p>
-        <p data-ja="日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」（ソヨン・ベーとの共演）としても活動中。"
+        <p data-ja="日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」としても活動中。"
            data-de="Vollständig bilingual (Japanisch/Deutsch). Aktiv auch als Klavierduo „Bae &amp; Koyama-Mueller" mit Soyeon Bae."
-           data-en="Fully bilingual in Japanese and German. Also active as piano duo 'Bae &amp; Koyama-Mueller' with Soyeon Bae.">
-          日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」（ソヨン・ベーとの共演）としても活動中。
+           data-en="Fully bilingual in Japanese and German. Also active as piano duo 'Bae &amp; Koyama-Mueller'.">
+          日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」としても活動中。
         </p>
       </div>
       <div class="profile-photos">
@@ -624,6 +636,9 @@ footer {
       <h2 class="section-title" data-ja="学歴・活動歴" data-de="Ausbildung &amp; Aktivitäten" data-en="Education &amp; Activities">学歴・活動歴</h2>
     </div>
     <div class="lauf-grid reveal">
+      <div class="lauf-photo">
+        <img src="images/photo-02.jpg" alt="光山ありさミュラー">
+      </div>
       <div class="lauf-col">
         <p class="lauf-col-head" data-ja="学歴" data-de="Studium" data-en="Education">学歴</p>
         <div class="lauf-item">
@@ -697,7 +712,7 @@ footer {
         <p class="lauf-col-head" data-ja="奨学金・助成" data-de="Stipendien &amp; Förderungen" data-en="Scholarships &amp; Grants">奨学金・助成</p>
         <div class="lauf-item">
           <span class="lauf-year">2023&#x301c;</span>
-          <div class="lauf-text"><strong>Werner Richard &#x2013; Dr. Carl Doerken Stiftung</strong></div>
+          <div class="lauf-text"><strong>Werner Richard &#x2013; Dr. Carl Dörken Stiftung</strong></div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2019&#x2013;23</span>
@@ -711,7 +726,7 @@ footer {
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2018&#x2013;21</span>
-          <div class="lauf-text"><strong>Werner Richard &#x2013; Dr. Carl Doerken Stiftung</strong></div>
+          <div class="lauf-text"><strong>Werner Richard &#x2013; Dr. Carl Dörken Stiftung</strong></div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2018&#x2013;19</span>
