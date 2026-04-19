@@ -441,7 +441,8 @@ footer {
 @media (max-width: 960px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; order: -1; }
+  .nav-logo { flex: 1; text-align: center; }
   .lang-bar { padding: 14px 20px; }
 
   .hero { grid-template-columns: 1fr; height: auto; min-height: 100svh; }
@@ -457,7 +458,7 @@ footer {
 
   .profile-grid { grid-template-columns: 1fr; gap: 40px; }
   .profile-photos { flex-direction: row; gap: 8px; }
-  .profile-photos img { flex: 1; aspect-ratio: 3/4 !important; }
+  .profile-photos img { flex: 1; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
 
   .awards-grid { grid-template-columns: 1fr 1fr; }
 
