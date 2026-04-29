@@ -158,7 +158,7 @@ nav.scrolled {
   font-weight: normal; line-height: 1.9;
   color: var(--ink-mid); max-width: 400px; margin: 0 auto 40px; text-align: center;
 }
-.hero-credentials { display: flex; flex-direction: column; gap: 18px; margin-bottom: 44px; }
+.hero-credentials { display: flex; flex-direction: column; gap: 18px; margin-bottom: 44px; align-items: center; }
 .credential { display: flex; align-items: flex-start; gap: 16px; }
 .credential-mark { width: 1px; height: 34px; background: var(--gold); flex-shrink: 0; margin-top: 4px; }
 .credential-text { font-family: var(--ff-sans); font-size: 16px; letter-spacing: 0.02em; line-height: 1.65; color: var(--ink-mid); }
@@ -478,8 +478,11 @@ footer {
   .hero-name { font-size: 34px; }
   .section-title { font-size: 28px; }
   .awards-grid { grid-template-columns: 1fr; }
-  .hero-jump-btns { flex-direction: column; align-items: flex-start; }
+  .hero-jump-btns { flex-direction: column; align-items: center; }
   .ig-banner { flex-direction: column; }
+  .credential-text { font-size: 14px; }
+  .credential-text strong { font-size: 15px; }
+  .hero-tagline { font-size: 15px; }
 }
 </style>
 </head>
@@ -526,10 +529,10 @@ footer {
   </div>
   <div class="hero-text-col">
     <p class="hero-eyebrow"
-       data-ja="デュッセルドルフ在住 · ピアニスト"
-       data-de="Pianistin · wohnhaft in Düsseldorf"
-       data-en="Pianist · based in Duesseldorf">
-      デュッセルドルフ在住 · ピアニスト
+       data-ja="ドイツ出身 · ピアニスト"
+       data-de="Pianistin · aus Deutschland"
+       data-en="Pianist · from Germany">
+      ドイツ出身 · ピアニスト
     </p>
     <h1 class="hero-name"
         data-ja="光山ありさミュラー"
@@ -540,11 +543,17 @@ footer {
        data-de="光山ありさミュラー"
        data-en="光山ありさミュラー">Alica Koyama Mueller</p>
     <div class="hero-rule"></div>
+    <p class="hero-tagline" style="margin-bottom:0.4em;"
+       data-ja="欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ"
+       data-de="Europäische Musiktradition und japanische Musikkultur verbinden"
+       data-en="Bridging European classical tradition and Japanese musical culture">
+      欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ
+    </p>
     <p class="hero-tagline"
-       data-ja="欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ、バイリンガルの演奏家。"
-       data-de="Eine bilinguale Pianistin, die europäische Musiktradition und japanische Musikkultur verbindet."
-       data-en="A bilingual pianist bridging European classical tradition and Japanese musical culture.">
-      欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ、バイリンガルの演奏家。
+       data-ja="トライリンガルの演奏家。"
+       data-de="Eine trilinguale Pianistin."
+       data-en="A trilingual performer.">
+      トライリンガルの演奏家。
     </p>
     <div class="hero-credentials">
       <div class="credential">
@@ -565,7 +574,7 @@ footer {
         <div class="credential-mark"></div>
         <div class="credential-text">
           <strong data-ja="アンドレアス・フロリッヒ教授に師事" data-de="Studium bei Prof. Andreas Frölich" data-en="Studied under Prof. Andreas Frölich">アンドレアス・フロリッヒ教授に師事</strong>
-          <span data-ja="ケルン音楽大学 · ギリロフ系譜" data-de="HfMT Köln · Gililov-Linie" data-en="HfMT Cologne · Gililov lineage">ケルン音楽大学 · ギリロフ系譜</span>
+          <span data-ja="ケルン音楽大学 · パヴェル・ギリロフ系譜" data-de="HfMT Köln · Pavel Gililov-Linie" data-en="HfMT Cologne · Pavel Gililov lineage">ケルン音楽大学 · パヴェル・ギリロフ系譜</span>
         </div>
       </div>
     </div>
@@ -584,7 +593,7 @@ footer {
       <a href="#lebenslauf"  class="jump-btn" data-ja="経歴"           data-de="Lebenslauf"     data-en="Career">経歴</a>
       <a href="#awards"      class="jump-btn" data-ja="受賞歴"           data-de="Auszeichnungen" data-en="Awards">受賞歴</a>
       <a href="#lessons"     class="jump-btn" data-ja="レッスン"         data-de="Unterricht"     data-en="Lessons">レッスン</a>
-      <a href="#contact"     class="jump-btn primary" data-ja="お問い合わせ" data-de="Kontakt"   data-en="Contact">お問い合わせ</a>
+      <a href="#contact"     class="jump-btn" data-ja="お問い合わせ" data-de="Kontakt"   data-en="Contact">お問い合わせ</a>
     </div>
   </div>
 </section>
