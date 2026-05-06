@@ -1,0 +1,9 @@
+サービス名,カテゴリ,用途,URL / アカウント,ログインアカウント,備考
+Wix,ドメイン,独自ドメイン管理・DNSレコード設定,manage.wix.com,alicakoyama@gmail.com,alicakoyamamueller.com のMXレコードもここで管理
+ImprovMX,メール,メール転送（info@alicakoyamamueller.com → Gmail）,app.improvmx.com,hiroaki.sakai.de@gmail.com,無料プラン。info@alicakoyamamueller.com を alicakoyama@gmail.com に転送
+Netlify,ホスティング,ホームページの公開・配信,netlify.com,—,GitHub Actionsから自動デプロイ。NETLIFY_AUTH_TOKEN / NETLIFY_SITE_ID をGitHub Secretsに保存
+GitHub,ソースコード管理,コードのバージョン管理・CI/CD,github.com/sakaiya-honpo/Alica-homepage,—,mainブランチへのpushでNetlifyに自動デプロイ
+Formspree,フォーム,お問い合わせフォームの送信処理,formspree.io（フォームID: mvzdkeqz）,—,フォーム送信データをメールで受け取る
+Google Fonts,フォント,Webフォントの読み込み,fonts.googleapis.com,—,EB Garamond / DM Sans / Noto Sans JP を使用
+Instagram,SNS,最新情報の発信・ホームページからリンク,instagram.com/alicakoyamamueller,—,ホームページのヒーローボタン・フッターからリンク
+YouTube,動画,演奏動画の埋め込み・リンク,youtube.com/@alicamuller4004,—,ホームページ内に動画を埋め込み表示
